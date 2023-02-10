@@ -1,0 +1,138 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+:root {
+  --body-bg: #90e0ef;
+  --main-bg: #219ebc;
+  --mount-bg-1: #ca6702;
+  --mount-bg-2: #bb3e03;
+}
+
+body.afternoon {
+  --body-bg: #e9c46a;
+  --main-bg: #fb8500;
+  --mount-bg-1: #e85d04;
+  --mount-bg-2: #bb3e03;
+}
+
+body.night {
+  --body-bg: #415a77;
+  --main-bg: #1A2238;
+  --mount-bg-1: #303C5D;
+  --mount-bg-2: #26314F;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--body-bg);
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 75%;
+  background-color: var(--main-bg);
+  overflow: hidden;
+  transform: translateX(-50%);
+}
+
+.mountains div {
+  position: absolute;
+  border-radius: 100px;
+  transform: rotate(45deg);
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+.mount1 {
+  bottom: -120px;
+  width: 210px;
+  height: 210px;
+  background-color: var(--mount-bg-1);
+  z-index: 20;
+}
+
+.mount2 {
+  bottom: -130px;
+  left: 30%;
+  width: 250px;
+  height: 250px;
+  background-color: var(--mount-bg-2);
+  z-index: 10;
+}
+
+.mount3 {
+  bottom: -120px;
+  left: 60%;
+  width: 200px;
+  height: 200px;
+  background-color: var(--mount-bg-1);
+  z-index: 30;
+}
+
+.mount4 {
+  bottom: -150px;
+  left: 20%;
+  width: 200px;
+  height: 200px;
+  background-color: var(--mount-bg-1);
+  z-index: 40;
+}
+
+.sun-moon {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  background-size: contain;
+  transform: translate(30%, 20%);
+}
+.sun-moon.day {
+  background-image: url(./assets/icons8-sun-star-96.png);
+}
+.sun-moon.night {
+  background-image: url(./assets/icons8-full-moon-96.png);
+}
+
+.time-date {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+  width: 400px;
+  height: 25%;
+  padding: 0 30px;
+}
+
+.time {
+  font-size: 60px;
+}
+
+.date {
+  font-size: 18px;
+  text-align: right;
+  text-transform: uppercase;
+}
