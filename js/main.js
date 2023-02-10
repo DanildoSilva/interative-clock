@@ -17,7 +17,7 @@ function changeTime() {
   const clockHour = document.querySelector('.time');
   setInterval(() => {
     a = new Date();
-    time = a.getHours() + ':' + a.getMinutes();
+    time = a.getHours() + ':' + ("00" + a.getMinutes()).slice(-2);
     clockHour.innerHTML = time;
   }, 1000);
 
